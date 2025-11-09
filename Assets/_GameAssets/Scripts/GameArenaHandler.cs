@@ -5,6 +5,8 @@ public class GameArenaHandler : MonoBehaviour
     [SerializeField]
     private Enemy enemyPrefab;
     [SerializeField]
+    private Player playerInstance;
+    [SerializeField]
     private int enemiesToSpawn = 1000;
 
     void Awake()
@@ -22,7 +24,8 @@ public class GameArenaHandler : MonoBehaviour
                 Random.Range(-arenaSize.x, arenaSize.x),
                 Random.Range(-arenaSize.y, arenaSize.y)
             );
-            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            Enemy enemySpawned = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            enemySpawned.Player = playerInstance;
         }
     }
 

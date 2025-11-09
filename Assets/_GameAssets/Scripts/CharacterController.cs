@@ -16,12 +16,12 @@ public class CharacterController : MonoBehaviour
 
     private void Move()
     {
-        characterRigidbody2D.AddForce(movementInput * movementForce);
+        characterRigidbody2D.AddForce(movementInput * movementForce * Time.deltaTime);
     }
 
     public void SetMovementInput(Vector2 inputVector)
     {
         // I prefer to save the input in the variable instead of moving the character instantly as the button is pressed, as it is easier to manage character functions invocation order in Update.
-        movementInput = inputVector;
+        movementInput = inputVector.normalized;
     }
 }

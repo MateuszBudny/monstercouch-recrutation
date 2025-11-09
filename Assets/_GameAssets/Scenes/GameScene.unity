@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameArenaHandler
   enemyPrefab: {fileID: 7279191836632667089, guid: a60c63f98fcba74449be985c4ff50625, type: 3}
+  playerInstance: {fileID: 2942981569186328173}
   enemiesToSpawn: 1000
 --- !u!4 &2025887676
 Transform:
@@ -483,15 +484,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8398652451966102354, guid: 53fe764c32eb939479ade8ae3b9e79f9, type: 3}
-      propertyPath: movementForce
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53fe764c32eb939479ade8ae3b9e79f9, type: 3}
+--- !u!114 &2942981569186328173 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9145276614166170987, guid: 53fe764c32eb939479ade8ae3b9e79f9, type: 3}
+  m_PrefabInstance: {fileID: 2942981569186328170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3541af7bd43a2e4998ebe1ad60079f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

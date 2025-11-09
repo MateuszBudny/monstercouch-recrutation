@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: facee6933f994b140aadd93ddee9b37a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  movementForce: 2
+  movementForce: 200
   characterRigidbody2D: {fileID: 5056225907927315641}
 --- !u!50 &5056225907927315641
 Rigidbody2D:
