@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class CursorManager : SingleBehaviour<CursorManager>
         set
         {
             currentCursorLockMode = value;
-            if(!controllerMode)
+            if(!noMouseMode)
             {
                 Cursor.lockState = value;
             }
@@ -20,17 +21,17 @@ public class CursorManager : SingleBehaviour<CursorManager>
     }
 
     private CursorLockMode currentCursorLockMode = CursorLockMode.Locked;
-    private bool controllerMode = false;
+    private bool noMouseMode = false;
 
     private void Start()
     {
         CurrentCursorLockMode = startingCursorLockMode;
     }
 
-    public void ControllerMode(bool isUsingController)
+    public void NoMouseMode(bool isUsingControllerOrKeyboard)
     {
-        controllerMode = isUsingController;
-        if(controllerMode)
+        noMouseMode = isUsingControllerOrKeyboard;
+        if(noMouseMode)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
